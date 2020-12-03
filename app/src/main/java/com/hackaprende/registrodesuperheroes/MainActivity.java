@@ -26,11 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void openDetailActivity(String superheroName, String alterEgo,
                                     String bio, float rating) {
+        Superhero superhero = new Superhero(superheroName, alterEgo, bio, rating);
+
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(DetailActivity.SUPERHERO_NAME, superheroName);
-        intent.putExtra(DetailActivity.ALTER_EGO, alterEgo);
-        intent.putExtra(DetailActivity.BIO, bio);
-        intent.putExtra(DetailActivity.RATING, rating);
+        intent.putExtra(DetailActivity.SUPERHERO_KEY, superhero);
         startActivity(intent);
     }
 }
