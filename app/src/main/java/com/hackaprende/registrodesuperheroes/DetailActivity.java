@@ -18,9 +18,6 @@ public class DetailActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         Superhero superhero = extras.getParcelable(SUPERHERO_KEY);
-        binding.heroName.setText(superhero.getName());
-        binding.alterEgoText.setText(superhero.getAlterEgo());
-        binding.bioText.setText(superhero.getBio());
-        binding.ratingBar.setRating(superhero.getPower());
+        binding.setSuperhero(superhero);
     }
 }

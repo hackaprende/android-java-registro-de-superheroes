@@ -3,7 +3,7 @@ package com.hackaprende.registrodesuperheroes;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-class Superhero implements Parcelable {
+public class Superhero implements Parcelable {
     private String name;
     private String alterEgo;
     private String bio;
